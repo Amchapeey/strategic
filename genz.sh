@@ -36,7 +36,7 @@ echo -e "${YELLOW}----------------------------------------------------------${NC
 echo -e "  Welcome To CHAPEEY STORE SCRIPT ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
 echo -e "  Author : ${green}🐲Cʜᴀᴘᴇᴇφ©ᵉⁿʲᵒᵠ🐉 PREMIUM VPN ® ${NC}${YELLOW}(${NC} ${green} CHAPEEY STORE ${NC}${YELLOW})${NC}"
-echo -e " © Recode By CHAPEEY VPN STORE${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
+echo -e " © Recode By CHAPEEY PREMIUM STORE${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 2
