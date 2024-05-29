@@ -5,15 +5,16 @@ apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && ge
 ```
 
 ### UPDATED SCRIPT
-
-
+```
 wget https://raw.githubusercontent.com/Amchapeey/strategic/main/update.sh && chmod +x update.sh && ./update.sh
-
+```
 ### TESTED ON OS 
+```
 - UBUNTU 20.04.05
 - DEBIAN 10
-
+```
 ### ADDITIONAL FEATURES
+```
 - Add 1GiB Swap
 - Dynamic installation
 - Tuning profile on the server
@@ -23,7 +24,7 @@ wget https://raw.githubusercontent.com/Amchapeey/strategic/main/update.sh && chm
 - Auto clear log every 3 minutes
 - Auto dealer expired
 - User Account Details
-
+```
 ### PORT INFO
 ```
 - TROJAN WS 443
