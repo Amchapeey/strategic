@@ -33,8 +33,8 @@ clear;clear;clear
 
   # // Banner
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "  Welcome To CHAPEEY STORE SCRIPT ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
-echo -e " This Will Quick Setup VPN Server On Your Server"
+echo -e "  WELCOME TO CHAPEEY PREMIUM STORE ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e " This Will Quick Setup VPN Server On Your Vps"
 echo -e "  Author : ${green}🐲Cʜᴀᴘᴇᴇφ©ᵉⁿʲᵒᵠ🐉 PREMIUM VPN ® ${NC}${YELLOW}(${NC} ${green} CHAPEEY STORE ${NC}${YELLOW})${NC}"
 echo -e " © Recode By CHAPEEY PREMIUM STORE${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
@@ -249,7 +249,7 @@ function nginx_install() {
 function base_package() {
     clear
     ########
-    print_install "Menginstall Packet Yang Dibutuhkan"
+    print_install "Installing the Required Packages"
     apt install zip pwgen openssl netcat socat cron bash-completion -y
     apt install figlet -y
     apt update -y
@@ -326,7 +326,7 @@ restart_system(){
 <code>Time     :</code><code>$TIMEZONE</code>
 <code>Exp Sc.  :</code><code>$exp</code>
 <code>────────────────────</code>
-<b> CHAPEEY STORE SCRIPT  </b>
+<b> CHAPEEY PREMIUM SCRIPT  </b>
 <code>────────────────────</code>
 <i>Automatic Notifications From Github</i>
 "'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/chapeey/"}]]}' 
