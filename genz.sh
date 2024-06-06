@@ -203,7 +203,7 @@ print_install "Membuat direktori xray"
 
 # Change Environment System
 function first_setup(){
-    timedatectl set-timezone Asia/Jakarta
+    timedatectl set-timezone Africa/Kenya
     echo iptables-persistent iptables-persistent/autosave_v4 boolean true | debconf-set-selections
     echo iptables-persistent iptables-persistent/autosave_v6 boolean true | debconf-set-selections
     print_success "Directory Xray"
@@ -298,7 +298,7 @@ echo $host1 > /root/domain
 echo ""
 elif [[ $host == "2" ]]; then
 #install cf
-wget ${REPO}limit/cf.sh && chmod +x cf.sh && ./cf.sh
+wget ${REPO}ubuntu/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 else
@@ -378,10 +378,10 @@ rm -rf /etc/vmess/.vmess.db
     mkdir -p /etc/kyt/limit/vless/ip
     mkdir -p /etc/kyt/limit/trojan/ip
     mkdir -p /etc/kyt/limit/ssh/ip
-    mkdir -p /etc/limit/vmess
-    mkdir -p /etc/limit/vless
-    mkdir -p /etc/limit/trojan
-    mkdir -p /etc/limit/ssh
+    mkdir -p /etc/ubuntu/vmess
+    mkdir -p /etc/ubuntu/vless
+    mkdir -p /etc/ubuntu/trojan
+    mkdir -p /etc/ubuntu/ssh
     chmod +x /var/log/xray
     touch /etc/xray/domain
     touch /var/log/xray/access.log
@@ -412,9 +412,9 @@ latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases |
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version $latest_version
  
     # // Chapeey Config Server
-    wget -O /etc/xray/config.json "${REPO}limit/config.json" >/dev/null 2>&1
+    wget -O /etc/xray/config.json "${REPO}ubuntu/config.json" >/dev/null 2>&1
     #wget -O /usr/local/bin/xray "${REPO}xray/xray.linux.64bit" >/dev/null 2>&1
-    wget -O /etc/systemd/system/runn.service "${REPO}limit/runn.service" >/dev/null 2>&1
+    wget -O /etc/systemd/system/runn.service "${REPO}ubuntu/runn.service" >/dev/null 2>&1
     #chmod +x /usr/local/bin/xray
     domain=$(cat /etc/xray/domain)
     IPVS=$(cat /etc/xray/ipvps)
@@ -425,11 +425,11 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
     curl -s ipinfo.io/city >>/etc/xray/city
     curl -s ipinfo.io/org | cut -d " " -f 2-10 >>/etc/xray/isp
     print_install "Installing Packet Configuration"
-    wget -O /etc/haproxy/haproxy.cfg "${REPO}limit/haproxy.cfg" >/dev/null 2>&1
-    wget -O /etc/nginx/conf.d/xray.conf "${REPO}limit/xray.conf" >/dev/null 2>&1
+    wget -O /etc/haproxy/haproxy.cfg "${REPO}ubuntu/haproxy.cfg" >/dev/null 2>&1
+    wget -O /etc/nginx/conf.d/xray.conf "${REPO}ubuntu/xray.conf" >/dev/null 2>&1
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/xray.conf
-    curl ${REPO}limit/nginx.conf > /etc/nginx/nginx.conf
+    curl ${REPO}ubuntu/nginx.conf > /etc/nginx/nginx.conf
     
 cat /etc/xray/xray.crt /etc/xray/xray.key | tee /etc/haproxy/hap.pem
 
@@ -464,7 +464,7 @@ print_success "Packet Configuration"
 function ssh(){
 clear
 print_install "Setting SSH Password"
-    wget -O /etc/pam.d/common-password "${REPO}limit/password"
+    wget -O /etc/pam.d/common-password "${REPO}ubuntu/password"
 chmod +x /etc/pam.d/common-password
 
     DEBIAN_FRONTEND=noninteractive dpkg-reconfigure keyboard-configuration
@@ -540,7 +540,7 @@ print_install "Installing Service Limit Quota"
 wget raw.githubusercontent.com/malisun77/Trobel/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
 
 cd
-wget -q -O /usr/bin/limit-ip "${REPO}limit/limit-ip"
+wget -q -O /usr/bin/limit-ip "${REPO}ubuntu/limit-ip"
 chmod +x /usr/bin/*
 cd /usr/bin
 sed -i 's/\r//' limit-ip
@@ -602,11 +602,11 @@ systemctl enable trip
 #SERVICE VMESS
 # // Installing UDP Mini
 mkdir -p /usr/local/kyt/
-wget -q -O /usr/local/kyt/udp-mini "${REPO}limit/udp-mini"
+wget -q -O /usr/local/kyt/udp-mini "${REPO}ubuntu/udp-mini"
 chmod +x /usr/local/kyt/udp-mini
-wget -q -O /etc/systemd/system/udp-mini-1.service "${REPO}limit/udp-mini-1.service"
-wget -q -O /etc/systemd/system/udp-mini-2.service "${REPO}limit/udp-mini-2.service"
-wget -q -O /etc/systemd/system/udp-mini-3.service "${REPO}limit/udp-mini-3.service"
+wget -q -O /etc/systemd/system/udp-mini-1.service "${REPO}ubuntu/udp-mini-1.service"
+wget -q -O /etc/systemd/system/udp-mini-2.service "${REPO}ubuntu/udp-mini-2.service"
+wget -q -O /etc/systemd/system/udp-mini-3.service "${REPO}ubuntu/udp-mini-3.service"
 systemctl disable udp-mini-1
 systemctl stop udp-mini-1
 systemctl enable udp-mini-1
@@ -626,7 +626,7 @@ function ssh_slow(){
 clear
 # // Installing UDP Mini
 print_install "Installing the SlowDNS Server module"
-    wget -q -O /tmp/nameserver "${REPO}limit/nameserver" >/dev/null 2>&1
+    wget -q -O /tmp/nameserver "${REPO}ubuntu/nameserver" >/dev/null 2>&1
     chmod +x /tmp/nameserver
     bash /tmp/nameserver | tee /root/install.log
  print_success "SlowDNS"
@@ -636,7 +636,7 @@ clear
 function ins_SSHD(){
 clear
 print_install "Memasang SSHD"
-wget -q -O /etc/ssh/sshd_config "${REPO}limit/sshd" >/dev/null 2>&1
+wget -q -O /etc/ssh/sshd_config "${REPO}ubuntu/sshd" >/dev/null 2>&1
 chmod 700 /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 systemctl restart ssh
@@ -650,7 +650,7 @@ clear
 print_install "Installing Dropbear"
 # // Installing Dropbear
 apt-get install dropbear -y > /dev/null 2>&1
-wget -q -O /etc/default/dropbear "${REPO}limit/dropbear.conf"
+wget -q -O /etc/default/dropbear "${REPO}ubuntu/dropbear.conf"
 chmod +x /etc/default/dropbear
 /etc/init.d/dropbear restart
 /etc/init.d/dropbear status
@@ -685,7 +685,7 @@ function ins_openvpn(){
 clear
 print_install "Installing OpenVPN"
 #OpenVPN
-wget ${REPO}limit/openvpn &&  chmod +x openvpn && ./openvpn
+wget ${REPO}ubuntu/openvpn &&  chmod +x openvpn && ./openvpn
 /etc/init.d/openvpn restart
 print_success "OpenVPN"
 }
@@ -696,7 +696,7 @@ print_install "Installing Backup Server"
 #BackupOption
 apt install rclone -y
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "${REPO}limit/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "${REPO}ubuntu/rclone.conf"
 #Install Wondershaper
 cd /bin
 git clone  https://github.com/magnific0/wondershaper.git
@@ -704,7 +704,7 @@ cd wondershaper
 sudo make install
 cd
 rm -rf wondershaper
-echo > /home/limit
+echo > /home/ubuntu
 apt install msmtp-mta ca-certificates bsd-mailx -y
 cat<<EOF>>/etc/msmtprc
 defaults
@@ -722,7 +722,7 @@ password Iamnoob
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
-wget -q -O /etc/ipserver "${REPO}limit/ipserver" && bash /etc/ipserver
+wget -q -O /etc/ipserver "${REPO}ubuntu/ipserver" && bash /etc/ipserver
 print_success "Backup Server"
 }
 
@@ -748,7 +748,7 @@ gotop_latest="$(curl -s https://api.github.com/repos/xxxserxxx/gotop/releases | 
     chronyc sourcestats -v
     chronyc tracking -v
     
-    wget ${REPO}limit/bbr.sh &&  chmod +x bbr.sh && ./bbr.sh
+    wget ${REPO}ubuntu/bbr.sh &&  chmod +x bbr.sh && ./bbr.sh
 print_success "Swap 1 G"
 }
 
@@ -774,16 +774,16 @@ echo "Banner /etc/kyt.txt" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/kyt.txt"@g' /etc/default/dropbear
 
 # Change Banner
-wget -O /etc/kyt.txt "${REPO}limit/issue.net"
+wget -O /etc/kyt.txt "${REPO}ubuntu/issue.net"
 print_success "Fail2ban"
 }
 
 function ins_epro(){
 clear
 print_install "installing ePro WebSocket Proxy"
-    wget -O /usr/bin/ws "${REPO}limit/ws" >/dev/null 2>&1
-    wget -O /usr/bin/tun.conf "${REPO}limit/tun.conf" >/dev/null 2>&1
-    wget -O /etc/systemd/system/ws.service "${REPO}limit/ws.service" >/dev/null 2>&1
+    wget -O /usr/bin/ws "${REPO}ubuntu/ws" >/dev/null 2>&1
+    wget -O /usr/bin/tun.conf "${REPO}ubuntu/tun.conf" >/dev/null 2>&1
+    wget -O /etc/systemd/system/ws.service "${REPO}ubuntu/ws.service" >/dev/null 2>&1
     chmod +x /etc/systemd/system/ws.service
     chmod +x /usr/bin/ws
     chmod 644 /usr/bin/tun.conf
@@ -794,7 +794,7 @@ systemctl start ws
 systemctl restart ws
 wget -q -O /usr/local/share/xray/geosite.dat "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat" >/dev/null 2>&1
 wget -q -O /usr/local/share/xray/geoip.dat "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat" >/dev/null 2>&1
-wget -O /usr/sbin/ftvpn "${REPO}limit/ftvpn" >/dev/null 2>&1
+wget -O /usr/sbin/ftvpn "${REPO}ubuntu/ftvpn" >/dev/null 2>&1
 chmod +x /usr/sbin/ftvpn
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
 iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
@@ -856,7 +856,7 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "installing Menu Packet"
-    wget ${REPO}limit/menu.zip
+    wget ${REPO}ubuntu/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
