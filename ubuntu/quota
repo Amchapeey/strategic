@@ -31,8 +31,8 @@ function con() {
 
 function cekvmess(){
   data=($(cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq))
-  if [[ ! -e /etc/limit/vmess ]]; then
-  mkdir -p /etc/limit/vmess
+  if [[ ! -e /etc/ubuntu/vmess ]]; then
+  mkdir -p /etc/ubuntu/vmess
   fi
   for user in ${data[@]}
   do
@@ -41,26 +41,26 @@ function cekvmess(){
   inb=$(echo "$data" | sed -n 1p)
   outb=$(echo "$data" | sed -n 2p) 
   quota0=$(echo -e "$[ $inb + $outb ]")
-        if [ -e /etc/limit/vmess/${user} ]; then
-        quota1=$(cat /etc/limit/vmess/${user});
+        if [ -e /etc/ubuntu/vmess/${user} ]; then
+        quota1=$(cat /etc/ubuntu/vmess/${user});
              if [[ ${#quota1} -gt 0 ]]; then
                 quota2=$(( ${quota0} + ${quota1} ));
-                echo "${quota2}" > /etc/limit/vmess/"${user}"
+                echo "${quota2}" > /etc/ubuntu/vmess/"${user}"
                 xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
               else
-                  echo "${quota0}" > /etc/limit/vmess/"${user}"
+                  echo "${quota0}" > /etc/ubuntu/vmess/"${user}"
                   xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
                 fi
            else
-               echo "${quota0}" > /etc/limit/vmess/"${user}"
+               echo "${quota0}" > /etc/ubuntu/vmess/"${user}"
                xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
             fi
      done
 }
 function cekvless(){
   data=($(cat /etc/xray/config.json | grep '^#&' | cut -d ' ' -f 2 | sort | uniq))
-  if [[ ! -e /etc/limit/vless ]]; then
-  mkdir -p /etc/limit/vless
+  if [[ ! -e /etc/ubuntu/vless ]]; then
+  mkdir -p /etc/ubuntu/vless
   fi
   for user in ${data[@]}
   do
@@ -69,26 +69,26 @@ function cekvless(){
   inb=$(echo "$data" | sed -n 1p)
   outb=$(echo "$data" | sed -n 2p) 
   quota0=$(echo -e "$[ $inb + $outb ]")
-        if [ -e /etc/limit/vless/${user} ]; then
-        quota1=$(cat /etc/limit/vless/${user});
+        if [ -e /etc/ubuntu/vless/${user} ]; then
+        quota1=$(cat /etc/ubuntu/vless/${user});
              if [[ ${#quota1} -gt 0 ]]; then
                 quota2=$(( ${quota0} + ${quota1} ));
-                echo "${quota2}" > /etc/limit/vless/"${user}"
+                echo "${quota2}" > /etc/ubuntu/vless/"${user}"
                 xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
               else
-                  echo "${quota0}" > /etc/limit/vless/"${user}"
+                  echo "${quota0}" > /etc/ubuntu/vless/"${user}"
                   xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
                 fi
            else
-               echo "${quota0}" > /etc/limit/vless/"${user}"
+               echo "${quota0}" > /etc/ubuntu/vless/"${user}"
                xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
             fi
      done
 }
 function cektrojan(){
   data=($(cat /etc/xray/config.json | grep '^#!' | cut -d ' ' -f 2 | sort | uniq))
-  if [[ ! -e /etc/limit/trojan ]]; then
-  mkdir -p /etc/limit/trojan
+  if [[ ! -e /etc/ubuntu/trojan ]]; then
+  mkdir -p /etc/ubuntu/trojan
   fi
   for user in ${data[@]}
   do
@@ -97,18 +97,18 @@ function cektrojan(){
   inb=$(echo "$data" | sed -n 1p)
   outb=$(echo "$data" | sed -n 2p) 
   quota0=$(echo -e "$[ $inb + $outb ]")
-        if [ -e /etc/limit/trojan/${user} ]; then
-        quota1=$(cat /etc/limit/trojan/${user});
+        if [ -e /etc/ubuntu/trojan/${user} ]; then
+        quota1=$(cat /etc/ubuntu/trojan/${user});
              if [[ ${#quota1} -gt 0 ]]; then
                 quota2=$(( ${quota0} + ${quota1} ));
-                echo "${quota2}" > /etc/limit/trojan/"${user}"
+                echo "${quota2}" > /etc/ubuntu/trojan/"${user}"
                 xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
               else
-                  echo "${quota0}" > /etc/limit/trojan/"${user}"
+                  echo "${quota0}" > /etc/ubuntu/trojan/"${user}"
                   xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
                 fi
            else
-               echo "${quota0}" > /etc/limit/trojan/"${user}"
+               echo "${quota0}" > /etc/ubuntu/trojan/"${user}"
                xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
             fi
      done
@@ -123,17 +123,17 @@ do
    if [ -e /etc/vmess/${user} ]; then
      cekdulu=$(cat /etc/vmess/${user});
       if [[ ${#cekdulu} -gt 1 ]]; then
-          if [ -e /etc/limit/vmess/${user} ]; then
-             pakai=$(cat /etc/limit/vmess/${user});
+          if [ -e /etc/ubuntu/vmess/${user} ]; then
+             pakai=$(cat /etc/ubuntu/vmess/${user});
                if [[ ${pakai} -gt ${cekdulu} ]]; then
                   exp=$(grep -w "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
                   sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
                   sed -i "/^### $user $exp/d" /etc/vmess/.vmess.db
                   systemctl restart xray >> /dev/null 2>&1
-                  bol=$(cat /etc/limit/vmess/${user});
+                  bol=$(cat /etc/ubuntu/vmess/${user});
                   total=$(con ${bol})
                   send-log
-                  rm -rf /etc/limit/vmess/${user}
+                  rm -rf /etc/ubuntu/vmess/${user}
               else
                echo ""
           fi
@@ -159,8 +159,8 @@ do
    if [ -e /etc/vless/${user} ]; then
      cekdulu=$(cat /etc/vless/${user});
       if [[ ${#cekdulu} -gt 1 ]]; then
-          if [ -e /etc/limit/vless/${user} ]; then
-             pakai=$(cat /etc/limit/vless/${user});
+          if [ -e /etc/ubuntu/vless/${user} ]; then
+             pakai=$(cat /etc/ubuntu/vless/${user});
                if [[ ${pakai} -gt ${cekdulu} ]]; then
                   exp=$(grep -w "^#& $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
                   sed -i "/^#& $user $exp/,/^},{/d" /etc/xray/config.json
@@ -169,7 +169,7 @@ do
                   bol=$(cat /etc/limit/vless/${user});
                   total=$(con ${bol})
                   send-log
-                  rm -rf /etc/limit/vless/${user}
+                  rm -rf /etc/ubuntu/vless/${user}
               else
                echo ""
           fi
@@ -195,8 +195,8 @@ do
    if [ -e /etc/trojan/${user} ]; then
      cekdulu=$(cat /etc/trojan/${user});
       if [[ ${#cekdulu} -gt 1 ]]; then
-          if [ -e /etc/limit/trojan/${user} ]; then
-             pakai=$(cat /etc/limit/trojan/${user});
+          if [ -e /etc/ubuntu/trojan/${user} ]; then
+             pakai=$(cat /etc/ubuntu/trojan/${user});
                if [[ ${pakai} -gt ${cekdulu} ]]; then
                   exp=$(grep -w "^#! $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
                   sed -i "/^#! $user $exp/,/^},{/d" /etc/xray/config.json
@@ -205,7 +205,7 @@ do
                   bol=$(cat /etc/limit/trojan/${user});
                   total=$(con ${bol})
                   send-log
-                  rm -rf /etc/limit/trojan/${user}
+                  rm -rf /etc/ubuntu/trojan/${user}
               else
                echo ""
           fi
