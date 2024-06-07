@@ -374,10 +374,10 @@ rm -rf /etc/vmess/.vmess.db
     mkdir -p /usr/bin/xray/
     mkdir -p /var/log/xray/
     mkdir -p /var/www/html
-    mkdir -p /etc/kyt/limit/vmess/ip
-    mkdir -p /etc/kyt/limit/vless/ip
-    mkdir -p /etc/kyt/limit/trojan/ip
-    mkdir -p /etc/kyt/limit/ssh/ip
+    mkdir -p /etc/kyt/ubuntu/vmess/ip
+    mkdir -p /etc/kyt/ubuntu/vless/ip
+    mkdir -p /etc/kyt/ubuntu/trojan/ip
+    mkdir -p /etc/kyt/ubuntu/ssh/ip
     mkdir -p /etc/ubuntu/vmess
     mkdir -p /etc/ubuntu/vless
     mkdir -p /etc/ubuntu/trojan
