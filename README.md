@@ -15,7 +15,7 @@
 <img src="https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&lines=𝘾𝙃𝘼𝙋𝙀𝙀𝙔-𝙏𝙀𝘾𝙃" />
 </p>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%23F70B10&size=27&lines=𝙸+𝙰𝙼+𝙸𝙽𝙽𝙾𝙲𝙴𝙽𝚃+𝙱𝙾𝚈;+𝙸𝚃'𝚜+𝙽𝙾𝚃+𝙹𝚄𝚂𝚃+𝙰+𝙽𝙰𝙼𝙴+𝙱𝚁𝙾;𝙸𝚃'𝚜+𝙰+𝙱𝚁𝙰𝙽𝙳;𝚃𝙷𝙰𝙽𝙺+𝚈𝙾𝚄+𝙴𝚅𝙴𝚁𝚈𝙾𝙽𝙴;𝙻𝙾𝚅e+𝚄+𝙰𝙻𝙻+𝙵𝚁𝙸𝙴𝙽𝙳𝚂)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%23F70B10&size=27&lines=𝙒𝙀+𝘼𝙍𝙀+𝙇𝙀𝙂𝙄𝙊𝙉;+𝙒𝙀+𝘿𝙊𝙉'𝙏+𝙁𝙊𝙍𝙂𝙀𝙏+𝙒𝙀+𝘿𝙊𝙉'𝙏+𝙁𝙊𝙍𝙂𝙄𝙑𝙀;𝙒𝙀+𝘼𝙍𝙀+𝙏𝙀𝘾𝙃𝙎;𝙒𝙀+𝘼𝙍𝙀+𝘼𝙉𝙊𝙉𝙔𝙈𝙊𝙐𝙎;𝙒𝙀+𝙋𝙍𝙊𝙏𝙀𝘾𝙏+𝙏𝙃𝙀+𝙉𝙀𝙏)](https://git.io/typing-svg)
 
 <h3><b><i>🏆 Github Statistics :</i></b></h3>
 <a href="https://github.com/MUMIT-404-CYBER"><img width=550 src="https://github-profile-trophy.vercel.app/?username=MUMIT-404-CYBER&theme=dracula&no-frame=true&title=Followers,Stars,Commit,Repository,Issues"/></a>
