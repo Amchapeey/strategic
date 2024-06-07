@@ -1,7 +1,7 @@
 
 <!-- Github README -->
 
-<p align="center"><img src="https://img.shields.io/badge/I Am A%20𝙆𝙀𝙉𝙔𝘼𝙉- CERTIFIED 𝙋𝙍𝙊𝙂𝙍𝘼𝙈𝙈𝙀𝙍-green?colorA=%23#00ff15ff&colorB=%23017e40&style=flat-square">
+<p align="center"><img src="https://img.shields.io/badge/I Am A%20𝙆𝙀𝙉𝙔𝘼𝙉- CERTIFIED 𝙋𝙍𝙊𝙂𝙍𝘼𝙈𝙈𝙀𝙍-green?colorA=%2300ff15ff&colorB=%23017e40&style=flat-square">
 
 </i></b></h3>
 <h3 align="center">
