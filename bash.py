@@ -28,8 +28,8 @@ banner = """
      dZP        qKRb
     dZP          qKKb
    fZP            SMMb
-   HZM            MMMM    {}Coded by {}: {}YT : 🐲Cʜᴀᴘᴇᴇφ©ᵉⁿʲᵒᵠ🐉
-{}   FqM            MMM {}TG{}: {}TG : @chapeey
+   HZM            MMMM    {}Coded by {}YT : 𝙘𝙝𝙖𝙥𝙚𝙚𝙮
+{}   FqM            MMM {}TG{}: {}TG : @𝙘𝙝𝙖𝙥𝙚𝙚𝙮
 {} __|'\ .        |\{}dS qML
 {} |    `.       | `' \{}Zq
 {}_)      \.{}___.{},|     .'
