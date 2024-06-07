@@ -1,4 +1,4 @@
-# author : @𝘾𝙝𝙖𝙥𝙚𝙚𝙮
+# author : @chapeey
 # -*- coding: utf-8 -*-
 
 import os
