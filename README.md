@@ -12,7 +12,7 @@
 <img align="center" alt="line" src="https://github.com/DalpatRathore/dalpatrathore/blob/main/assets/images/line-1.svg">
 
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?color=%23a52a2aff&center=true&vCenter=true&lines=𝘾𝙃𝘼𝙋𝙀𝙀𝙔-𝙏𝙀𝘾𝙃" />
+<img src="https://readme-typing-svg.herokuapp.com?color=%234b0082ff&center=true&vCenter=true&lines=𝘾𝙃𝘼𝙋𝙀𝙀𝙔-𝙏𝙀𝘾𝙃" />
 </p>
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%23F70B10&size=27&lines=𝙒𝙀+𝘼𝙍𝙀+𝙇𝙀𝙂𝙄𝙊𝙉;+𝙒𝙀+𝘿𝙊𝙉'𝙏+𝙁𝙊𝙍𝙂𝙀𝙏;𝙒𝙀+𝙍𝙀𝙑𝙀𝙉𝙂𝙀;𝙒𝙀+𝘼𝙍𝙀+𝙏𝙀𝘾𝙃𝙎;𝙒𝙀+𝘼𝙍𝙀+𝘼𝙉𝙊𝙉𝙔𝙈𝙊𝙐𝙎;𝙒𝙀+𝙋𝙍𝙊𝙏𝙀𝘾𝙏+𝙒𝙃𝘼𝙏'𝙎+𝙊𝙐𝙍𝙎)](https://git.io/typing-svg)
