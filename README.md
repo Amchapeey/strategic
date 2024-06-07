@@ -78,5 +78,5 @@ wget https://raw.githubusercontent.com/Amchapeey/strategic/main/update.sh && chm
 ```
 
 ### TELEGRAM
-<p align="center">
+<p align="center"><b>
 <a href="https://t.me/chapeey" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&message=Click%20Here&color=blue"></a><br>
