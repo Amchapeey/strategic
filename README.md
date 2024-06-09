@@ -48,7 +48,7 @@ wget https://raw.githubusercontent.com/Amchapeey/strategic/main/update.sh && chm
 - Tuning profile on the server
 - Xray Core
 - Added fail2ban
-- Auto block some Indonesian ads by default
+- Auto block some  ads by default
 - Auto clear log every 3 minutes
 - Auto dealer expired
 - User Account Details
