@@ -5,7 +5,7 @@
 
 </i></b></h3>
 <h3 align="center">
-  <img src="https://emoji.discord.stemojis/07f9f52b-ac4c-4134-bbb6-fc0edcf70f6f.png" width="25">
+  <img src="https://emoji.discord.st/emojis/07f9f52b-ac4c-4134-bbb6-fc0edcf70f6f.png" width="25">
   &nbsp; 𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙈𝙔 𝙒𝙊𝙍𝙇𝘿&nbsp;
   <img src="https://emoji.discord.st/emojis/768b108d-274f-4f44-a634-8477b16efce7.gif" width="25">
 </h3>
