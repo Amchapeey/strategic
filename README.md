@@ -28,7 +28,7 @@
 
 ### INSTALL SCRIPT 
 ```
-apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q https://raw.githubusercontent.com/Amchapeey/strategic/main/genz.sh && chmod +x genz.sh && ./genz.sh
+apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/Amchapeey/strategic/main/genz.sh && chmod +x genz.sh && ./genz.sh
 
 ```
 
@@ -87,3 +87,9 @@ wget https://raw.githubusercontent.com/Amchapeey/strategic/main/update.sh && chm
 ### TELEGRAM
 <p align="center"><b>
 <a href="https://t.me/chapeey" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&message=Click%20Here&color=blue"></a><br>
+
+### WHATSAPP 
+
+WhatsApp :
+<br><br><a href="https://wa.me/+254704348959" target=â€_blankâ€><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Whatsapp&label=Whatsapp&message=Click%20Here&color=#006400">
+
