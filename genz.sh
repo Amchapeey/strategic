@@ -120,7 +120,7 @@ mai="datediff "$Exp" "$DATE""
 
 # Status ExpiRED Active | Geo Project
 Info="(${green}Active${NC})"
-Error="(${RED}DEMISED${NC})"
+Error="(${RED}Inactive${NC})"
 today=`date -d "0 days" +"%Y-%m-%d"`
 Exp1=$(curl https://raw.githubusercontent.com/Amchapeey/strategic/main/keygen | grep $MYIP | awk '{print $4}')
 if [[ $today < $Exp1 ]]; then
