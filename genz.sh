@@ -327,7 +327,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     TIMEZONE=$(printf '%(%H:%M:%S)T')
     TEXT="
 <code>────────────────────</code>
-<b>⚡PTEMIUM SCRIPTb>
+<b> CHAPEEY PREMIUM STORE>
 <code>────────────────────</code>
 <code>Owner    :</code><code>$username</code>
 <code>Domain   :</code><code>$domain</code>
