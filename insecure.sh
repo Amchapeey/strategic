@@ -39,7 +39,7 @@ clear;clear;clear
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e " 𝐂𝐇𝐀𝐏𝐄𝐄𝐘 𝐒𝐓𝐎𝐑𝐄 ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Vps"
-echo -e "  Author : ${green}𝐋𝐎𝐑𝐃 𝐂𝐇𝐀𝐏𝐄𝐄𝐘 ${NC}${YELLOW}(${NC} ${green} CHAPEEY STORE ${NC}${YELLOW})${NC}"
+echo -e "  Author : ${red}𝐋𝐎𝐑𝐃 𝐂𝐇𝐀𝐏𝐄𝐄𝐘 ${NC}${YELLOW}(${NC} ${green} CHAPEEY STORE ${NC}${YELLOW})${NC}"
 echo -e "𝐏𝐑𝐎𝐆𝐑𝐀𝐌𝐌𝐄𝐃 𝐖𝐈𝐓𝐇 𝐋𝐎𝐕𝐄 ${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo "" 
