@@ -1,9 +1,13 @@
 #!/bin/bash
-### Color
-apt upgrade -y
-apt update -y
-apt install lolcat -y
-apt install wondershaper -y
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# System Request : Debian 9+/Ubuntu 18.04+/20+
+# Develovers » chapeey
+# Email      » chapeeystore@gmail.com
+# telegram   » https://t.me/chapeey
+# whatsapp   » wa.me/+254704348959
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# chapeey script
+
 Green="\e[92;1m"
 RED="\033[31m"
 YELLOW="\033[33m"
@@ -87,48 +91,9 @@ NC='\e[0m'
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
-#IZIN SCRIPT
-MYIP=$(curl -sS ipv4.icanhazip.com)
-echo -e "\e[32mloading...\e[0m" 
-clear
-# Version sc
-clear
-#########################
-# USERNAME
-rm -f /usr/bin/user
-username=$(curl https://raw.githubusercontent.com/Amchapeey/strategic/main/keygen | grep $MYIP | awk '{print $2}')
-echo "$username" >/usr/bin/user
-expx=$(curl https://raw.githubusercontent.com/Amchapeey/strategic/main/keygen | grep $MYIP | awk '{print $3}')
-echo "$expx" >/usr/bin/e
-# DETAIL ORDER
-username=$(cat /usr/bin/user)
-oid=$(cat /usr/bin/ver)
-exp=$(cat /usr/bin/e)
-clear
-# CERTIFICATE STATUS
-d1=$(date -d "$valid" +%s)
-d2=$(date -d "$today" +%s)
-certifacate=$(((d1 - d2) / 86400))
-# VPS Information
-DATE=$(date +'%Y-%m-%d')
-datediff() {
-    d1=$(date -d "$1" +%s)
-    d2=$(date -d "$2" +%s)
-    echo -e "$COLOR1 $NC Expiry In   : $(( (d1 - d2) / 86400 )) Days"
-}
-mai="datediff "$Exp" "$DATE""
-
-# Status ExpiRED Active | Geo Project
-Info="(${green}Active${NC})"
-Error="(${RED}Inactive${NC})"
-today=`date -d "0 days" +"%Y-%m-%d"`
-Exp1=$(curl https://raw.githubusercontent.com/Amchapeey/strategic/main/keygen | grep $MYIP | awk '{print $4}')
-if [[ $today < $Exp1 ]]; then
-sts="${Info}"
-else
-sts="${Error}"
-fi
-echo -e "\e[32mloading...\e[0m"
+apt install ruby -y
+gem install lolcat
+apt install wondershaper -y
 clear
 # REPO    
     REPO="https://raw.githubusercontent.com/Amchapeey/strategic/main/"
@@ -143,9 +108,9 @@ function print_ok() {
     echo -e "${OK} ${BLUE} $1 ${FONT}"
 }
 function print_install() {
-	echo -e "${green} =============================== ${FONT}"
-    echo -e "${YELLOW} # $1 ${FONT}"
-	echo -e "${green} =============================== ${FONT}"
+	echo -e "${green} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${FONT}"
+    echo -e "${YELLOW} » $1 ${FONT}"
+	echo -e "${green} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${FONT}"
     sleep 1
 }
 
@@ -155,9 +120,9 @@ function print_error() {
 
 function print_success() {
     if [[ 0 -eq $? ]]; then
-		echo -e "${green} =============================== ${FONT}"
-        echo -e "${Green} # $1 installed successfully"
-		echo -e "${green} =============================== ${FONT}"
+		echo -e "${green} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${FONT}"
+        echo -e "${Green} » $1 installed successfully"
+		echo -e "${green} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${FONT}"
         sleep 2
     fi
 }
