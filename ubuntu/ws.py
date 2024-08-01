@@ -13,7 +13,7 @@ PASS = ''
 BUFLEN = 8196 * 8
 TIMEOUT = 60
 MSG = '𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐂𝐇𝐀𝐏𝐄𝐄𝐘'
-COR = '<font color="#1ce020">'
+COR = '<font color="#30e528">'
 FTAG = '</font>'
 DEFAULT_HOST = '0.0.0.0:22'
 RESPONSE = "HTTP/1.1 101 " + str(COR) + str(MSG) + str(FTAG) + "\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n"
