@@ -242,7 +242,7 @@ function base_package() {
     
 }
 clear
-# Fungsi input domain
+# Function input domain
 function install_domain() {
  echo -e ""
 clear
