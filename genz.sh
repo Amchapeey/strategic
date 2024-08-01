@@ -244,19 +244,18 @@ function base_package() {
 clear
 # Fungsi input domain
 function install_domain() {
- echo -e ""
+echo -e ""
 clear
- echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo -e " \e[1;32mPlease Select a Domain Type Below \e[0m|"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo -e " \e[1;32m1)\e[0m Using Your Own Domain
- (Recommended)"
-echo -e " \e[1;32m2)\e[0m Use Domain Random "
+echo -e " \e[1;32mPlease Select a Domain Type Below \e[0m"
+echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e " \e[1;32m1)\e[0m Using Your Own Domain (Recommended)"
+echo -e " \e[1;32m2)\e[0m Use Domain Random"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 read -p " Please select numbers 1-2 or Any Button(Random) : " host
 echo ""
 if [[ $host == "1" ]]; then
-echo -e "   \e[1;32mPlease Enter Your Subdomain $NC"
+echo -e " \e[1;32mPlease Enter Your Subdomain $NC"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
 read -p " Input Domain : " host1
