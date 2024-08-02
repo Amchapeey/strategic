@@ -460,12 +460,12 @@ LimitNOFILE=1000000
 WantedBy=multi-user.target
 
 EOF
-print_success "Konfigurasi Packet"
+print_success "Packet Configuration"
 }
 
 function ssh(){
 clear
-print_install "Memasang Password SSH"
+print_install "installing Password SSH"
     wget -O /etc/pam.d/common-password "${REPO}ubuntu/password"
 chmod +x /etc/pam.d/common-password
 
