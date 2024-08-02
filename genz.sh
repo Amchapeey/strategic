@@ -989,7 +989,7 @@ clear
     enable_services
     restart_system
 }
-instal
+install
 echo ""
 history -c
 rm -rf /root/menu
