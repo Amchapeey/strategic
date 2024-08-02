@@ -962,15 +962,15 @@ print_install "Enable Service"
 }
 
 # Fingsi Install Script
-function instal(){
+function install(){
 clear
     first_setup
     nginx_install
     base_package
     make_folder_xray
-    pasang_domain
+    install_domain
     password_default
-    pasang_ssl
+    install_ssl
     install_xray
     ssh
     udp_mini
