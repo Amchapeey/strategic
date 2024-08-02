@@ -33,8 +33,9 @@ clear;clear;clear
 
   # // Banner
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐂𝐇𝐀𝐏𝐄𝐄𝐘 𝐒𝐓𝐎𝐑𝐄  ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e "${PURPLE} 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐂𝐇𝐀𝐏𝐄𝐄𝐘 𝐒𝐓𝐎𝐑𝐄 ${NC}"
 echo -e "  Author : ${RED}𝐋𝐎𝐑𝐃 𝐂𝐇𝐀𝐏𝐄𝐄𝐘 ${NC}${YELLOW}${NC}"
+echo -e "  ©2024  : ${BLUE} 𝐒𝐓𝐀𝐁𝐋𝐄 𝐄𝐃𝐈𝐓𝐈𝐎𝐍 ${NC}"
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 sleep 2
