@@ -1,7 +1,7 @@
 
 <!-- Github README -->
 
-<p align="center"><big><img src="https://img.shields.io/badge/𝙄 𝘼𝙈 𝘼%20TECH- ENTHUSIAST AND A 𝙋𝙍𝙊𝙂𝙍𝘼𝙈𝙈𝙀𝙍-blue?colorA=%2300ff15ff&colorB=%23ff0000ec&style=flat-square"></big>
+<p align="center"><big><img src="https://img.shields.io/badge/𝙄 𝘼𝙈 𝘼%20TECH ENTHUSIAST- AND A 𝙋𝙍𝙊𝙂𝙍𝘼𝙈𝙈𝙀𝙍-blue?colorA=%2300ff15ff&colorB=%23ff0000ec&style=flat-square"></big>
 
 </i></b></h3>
 <h3 align="center">
