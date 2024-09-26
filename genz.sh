@@ -59,7 +59,7 @@ else
 fi
 
 # // Check if the IP is registered 
-ALLOWED_IPS_URL="https://raw.githubusercontent.com/Amchapeey/strategic/main/keygen"
+ALLOWED_IPS_URL="https://raw.githubusercontent.com/Amchapeey/strategic/main/Database"
 
 # Filter out comment lines and check if the IP exists
 if curl -s "$ALLOWED_IPS_URL" | grep -Ev '^###' | grep -q "$IP"; then
