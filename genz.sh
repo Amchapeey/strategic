@@ -65,7 +65,7 @@ ALLOWED_IPS_URL="https://raw.githubusercontent.com/Amchapeey/strategic/main/keyg
 if curl -s "$ALLOWED_IPS_URL" | grep -Ev '^###' | grep -q "$IP"; then
     echo -e "${OK} Your IP is registered for installation."
 else
-    echo -e "${ERROR} Your IP ( ${YELLOW}$IP${NC} ) is not registered. Installation is aborted."
+    echo -e "${ERROR} Your IP ( ${YELLOW}$IP${NC} ) could not find ur ip in our Database . Installation is aborted."
     exit 1
 fi
 
