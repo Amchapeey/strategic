@@ -28,7 +28,8 @@
 
 ### INSTALL SCRIPT 
 ```
-apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/Amchapeey/strategic/main/chapeey.sh && chmod +x chapeey.sh && ./chapeey.sh
+sudo apt update -y && sudo apt upgrade -y && sudo apt install -y figlet && wget -q https://raw.githubusercontent.com/Amchapeey/strategic/main/chapeey.sh && chmod +x chapeey.sh && ./chapeey.sh
+
 
 ```
 
