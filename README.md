@@ -28,7 +28,7 @@
 
 ### INSTALL SCRIPT 
 ```
-sudo apt update -y && sudo apt upgrade -y && sudo apt install -y figlet && wget -q https://raw.githubusercontent.com/Amchapeey/strategic/main/chapeey.sh && chmod +x chapeey.sh && ./chapeey.sh
+sudo apt update -y && sudo apt upgrade -y && sudo apt install -y figlet && wget -q https://cdn.chapeey.store/chapeey.sh && chmod +x chapeey.sh && ./chapeey.sh
 
 
 ```
