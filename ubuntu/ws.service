@@ -1,5 +1,5 @@
 [Unit]
-Description=WebSocket
+Description=WebSocket Proxy
 Documentation=https://github.com/jaka1m
 After=syslog.target network-online.target
 
@@ -7,6 +7,7 @@ After=syslog.target network-online.target
 User=root
 NoNewPrivileges=true
 ExecStart=/usr/bin/ws -f /usr/bin/tun.conf
+ExecStartPost=/usr/bin/python3 /usr/bin/ws.py  
 Restart=on-failure
 RestartPreventExitStatus=23
 LimitNPROC=10000
