@@ -1,5 +1,5 @@
 [Unit]
-Description=Python Proxy ShadowTunneling
+Description=Python Proxy ChapeeyTunneling
 Documentation=https://t.me/urtelegram
 After=network.target nss-lookup.target
 
