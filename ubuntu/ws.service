@@ -1,6 +1,6 @@
 [Unit]
-Description=Python Proxy FighterTunnel
-Documentation=https://t.me/yha_bot
+Description=Python chapeey tunnel
+Documentation=https://t.me/chapeey
 After=network.target nss-lookup.target
 
 [Service]
