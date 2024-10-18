@@ -18,7 +18,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2358f317&size=27&lines=𝙒𝙀+𝘼𝙍𝙀+𝐓𝐄𝐂𝐇𝐒;+𝙒𝙀+𝘿𝙊+𝐍𝐎𝙏+𝐁𝐑𝐄𝐀𝐂𝐇;𝙒𝙀+𝐄𝐍𝐂𝐑𝐘𝐏𝐓;𝙒𝙀+𝐒𝐄𝐂𝐔𝐑𝐄+𝐎𝐔𝐑+𝐃𝐀𝐓𝐀)](https://git.io/typing-svg)
 
 <h3><b><i>🏆 Github Statistics :</i></b></h3>
-<a href="https://github.com/MUMIT-404-CYBER"><img width=550 src="https://github-profile-trophy.vercel.app/?username=MUMIT-404-CYBER&theme=dracula&no-frame=true&title=Followers,Stars,Commit,Repository,Issues"/></a>
+<a href="https://github.com/chapeey/strategic"><img width=550 src="https://github-profile-trophy.vercel.app/?username=MUMIT-404-CYBER&theme=dracula&no-frame=true&title=Followers,Stars,Commit,Repository,Issues"/></a>
 
 </p>
 <p align="center"> 
