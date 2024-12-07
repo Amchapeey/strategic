@@ -1,11 +1,11 @@
 #!/bin/bash
-#
-# Credit to original author: sam https://github.com/nikzad-avasam/block-torrent-on-server
+# Credit to original author: chapeey
+https://github.com/Amchapeey/Strategic/Torrent-blocker
 # GitHub:   https://github.com/nikzad-avasam/block-torrent-on-server
 # Author:   sam nikzad
 
 echo -n "Blocking all torrent trafic on your server. pls wait ... "
-wget -q -O/etc/trackers https://raw.githubusercontent.com/nikzad-avasam/block-torrent-on-server/main/domains
+wget -q -O/etc/trackers https://raw.githubusercontent.com/Amchapeey/block-torrent-on-server/main/domains
 cat >/etc/cron.daily/denypublic<<'EOF'
 IFS=$'\n'
 L=$(/usr/bin/sort /etc/trackers | /usr/bin/uniq)
