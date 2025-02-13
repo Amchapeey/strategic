@@ -18,11 +18,14 @@ except IndexError:
 PASS = ''
 BUFLEN = 8196 * 8
 TIMEOUT = 60
+STYL= '<p style="text-align:center;">'
 MSG = '<b>WEBSOCKET BY CHAPEEY'
 COR = '<font color="#30e528">'
-FTAG = '</font>'
+BIG = '<big>'
+FTAG = '</big></font>'
+NTAG = '</p>'
 DEFAULT_HOST = '0.0.0.0:143'
-RESPONSE = f"HTTP/1.1 101 {COR}{MSG}{FTAG}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n"
+RESPONSE = f"HTTP/1.1 101 {STYL}{COR}{BIG}{MSG}{NTAG}{FTAG}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n"
 
 
 class Server(threading.Thread):
