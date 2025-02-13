@@ -1,8 +1,13 @@
 [Unit]
 Description=WebSocket Proxy Server
-After=network.target                                                                                                                          [Service]
-ExecStart=/usr/bin/env python3 /usr/bin/ws 10015                       Restart=always                                                         User=root
-WorkingDirectory=/usr/bin                                              StandardOutput=journal
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/env python3 /usr/bin/ws 10015
+Restart=always
+User=root
+WorkingDirectory=/usr/bin
+StandardOutput=journal
 StandardError=journal
 LimitNOFILE=1048576
 
