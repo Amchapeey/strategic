@@ -21,7 +21,7 @@ TIMEOUT = 60
 MSG = 'POWERED BY CHAPEEY'
 COR = '<font color="#30e528">'
 FTAG = '</font>'
-DEFAULT_HOST = '0.0.0.0:22'
+DEFAULT_HOST = '0.0.0.0:143'
 RESPONSE = f"HTTP/1.1 101 {COR}{MSG}{FTAG}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n"
 
 
