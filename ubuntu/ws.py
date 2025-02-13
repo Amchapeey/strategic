@@ -7,7 +7,7 @@ import select
 import sys
 import time
 
-# Configuração da conexão
+# Configuration
 IP = '0.0.0.0'
 
 try:
@@ -18,14 +18,14 @@ except IndexError:
 PASS = ''
 BUFLEN = 8196 * 8
 TIMEOUT = 60
-STYL= '<p style="text-align:center;">'
+STYL = '<p style="text-align:center;">'
 MSG = '<b>WEBSOCKET BY CHAPEEY'
 COR = '<font color="#30e528">'
 BIG = '<big>'
 FTAG = '</big></font>'
 NTAG = '</p>'
-DEFAULT_HOST = '0.0.0.0:143'
-RESPONSE = f"HTTP/1.1 101 {STYL}{COR}{BIG}{MSG}{NTAG}{FTAG}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n"
+DEFAULT_HOSTS = ['0.0.0.0:143', '0.0.0.0:22', '0.0.0.0:80', '0.0.0.0:443']
+RESPONSE = f"HTTP/1.1 101 {STYL}{COR}{BIG}{MSG}{FTAG}{NTAG}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n"
 
 
 class Server(threading.Thread):
@@ -61,7 +61,7 @@ class Server(threading.Thread):
                     c.setblocking(1)
                 except socket.timeout:
                     continue
-                
+
                 conn = ConnectionHandler(c, self, addr)
                 conn.start()
                 self.addConn(conn)
@@ -117,27 +117,14 @@ class ConnectionHandler(threading.Thread):
             hostPort = self.findHeader(self.client_buffer.decode(), 'X-Real-Host')
 
             if not hostPort:
-                hostPort = DEFAULT_HOST
+                hostPort = None  # Ensures we fall back to DEFAULT_HOSTS
 
             split = self.findHeader(self.client_buffer.decode(), 'X-Split')
 
             if split:
                 self.client.recv(BUFLEN)
 
-            if hostPort:
-                passwd = self.findHeader(self.client_buffer.decode(), 'X-Pass')
-
-                if PASS and passwd == PASS:
-                    self.method_CONNECT(hostPort)
-                elif PASS and passwd != PASS:
-                    self.client.send(b'HTTP/1.1 400 WrongPass!\r\n\r\n')
-                elif hostPort.startswith(IP):
-                    self.method_CONNECT(hostPort)
-                else:
-                    self.client.send(b'HTTP/1.1 403 Forbidden!\r\n\r\n')
-            else:
-                print("- No X-Real-Host!")
-                self.client.send(b'HTTP/1.1 400 NoXRealHost!\r\n\r\n')
+            self.method_CONNECT(hostPort)
 
         except Exception as e:
             print(f"Error: {e}")
@@ -162,16 +149,39 @@ class ConnectionHandler(threading.Thread):
         else:
             port = 443 if self.method == "CONNECT" else 22
 
-        addr_info = socket.getaddrinfo(host, port, socket.AF_UNSPEC, socket.SOCK_STREAM)
+        # Resolve domain to IP before connecting
+        try:
+            resolved_ip = socket.gethostbyname(host)
+            print(f"Resolved {host} to {resolved_ip}")
+            addr_info = socket.getaddrinfo(resolved_ip, port, socket.AF_UNSPEC, socket.SOCK_STREAM)
+        except socket.gaierror:
+            print(f"Failed to resolve {host}")
+            return
+
         self.target = socket.socket(*addr_info[0][:3])
         self.targetClosed = False
         self.target.connect(addr_info[0][4])
 
     def method_CONNECT(self, path):
-        self.connect_target(path)
-        self.client.sendall(RESPONSE.encode())
-        self.client_buffer = b''
-        self.doCONNECT()
+        possible_hosts = [path] if path else DEFAULT_HOSTS  # Use provided host or defaults
+        last_error = None
+
+        for host in possible_hosts:
+            try:
+                print(f"Trying to connect to {host}...")
+                self.connect_target(host)  # Try to connect
+                self.client.sendall(RESPONSE.encode())  # Send WebSocket response
+                self.client_buffer = b''
+                self.doCONNECT()
+                return  # If successful, exit function
+            except Exception as e:
+                print(f"Connection to {host} failed: {e}")
+                last_error = e
+                continue  # Try the next host if one fails
+
+        # If all attempts fail, send an error response
+        self.client.send(b'HTTP/1.1 502 Bad Gateway\r\n\r\n')
+        print(f"All connection attempts failed: {last_error}")
 
     def doCONNECT(self):
         socs = [self.client, self.target]
@@ -209,7 +219,7 @@ class ConnectionHandler(threading.Thread):
 def main(host=IP, port=PORT):
     print("\033[0;34m━" * 8, "\033[1;32m PROXY SOCKS", "\033[0;34m━" * 8, "\n")
     print(f"\033[1;33mIP:\033[1;32m {IP}")
-    print(f"\033[1;33mPORTA:\033[1;32m {PORT}\n")
+    print(f"\033[1;33mPORT:\033[1;32m {PORT}\n")
     print("\033[0;34m━" * 10, "\033[1;32m SSHPLUS", "\033[0;34m━\033[1;37m" * 11, "\n")
 
     server = Server(IP, PORT)
@@ -219,7 +229,7 @@ def main(host=IP, port=PORT):
         while True:
             time.sleep(2)
     except KeyboardInterrupt:
-        print("\nParando...")
+        print("\nStopping...")
         server.close()
 
 
