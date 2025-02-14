@@ -6,6 +6,7 @@ import threading
 import select
 import sys
 import time
+import yaml
 
 # Configuration
 IP = '0.0.0.0'
@@ -24,9 +25,13 @@ COR = '<font color="#30e528">'
 BIG = '<big>'
 FTAG = '</big></font>'
 NTAG = '</p>'
-DEFAULT_HOSTS = ['0.0.0.0:143', '0.0.0.0:22', '0.0.0.0:80', '0.0.0.0:443']
 RESPONSE = f"HTTP/1.1 101 {STYL}{COR}{BIG}{MSG}{FTAG}{NTAG}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n"
 
+# Load configuration from tun.conf
+with open('/usr/bin/tun.conf', 'r') as file:
+    config = yaml.safe_load(file)
+
+DEFAULT_HOSTS = [f"{entry['target_host']}:{entry['target_port']}" for entry in config['listen']]
 
 class Server(threading.Thread):
     def __init__(self, host, port):
@@ -59,6 +64,7 @@ class Server(threading.Thread):
                 try:
                     c, addr = self.soc.accept()
                     c.setblocking(1)
+                    print(f"Accepted connection from {addr}")
                 except socket.timeout:
                     continue
 
@@ -84,7 +90,6 @@ class Server(threading.Thread):
             for c in self.threads:
                 c.close()
 
-
 class ConnectionHandler(threading.Thread):
     def __init__(self, socClient, server, addr):
         super().__init__()
@@ -99,21 +104,22 @@ class ConnectionHandler(threading.Thread):
             try:
                 self.client.shutdown(socket.SHUT_RDWR)
                 self.client.close()
-            except:
-                pass
+            except Exception as e:
+                print(f"Error closing client socket: {e}")
             self.clientClosed = True
 
         if not self.targetClosed:
             try:
                 self.target.shutdown(socket.SHUT_RDWR)
                 self.target.close()
-            except:
-                pass
+            except Exception as e:
+                print(f"Error closing target socket: {e}")
             self.targetClosed = True
 
     def run(self):
         try:
             self.client_buffer = self.client.recv(BUFLEN)
+            print(f"Received data from client: {self.client_buffer}")
             hostPort = self.findHeader(self.client_buffer.decode(), 'X-Real-Host')
 
             if not hostPort:
@@ -200,21 +206,24 @@ class ConnectionHandler(threading.Thread):
                     data = in_.recv(BUFLEN)
                     if data:
                         if in_ is self.target:
+                            print(f"Received data from target: {data}")
                             self.client.send(data)
                         else:
                             while data:
+                                print(f"Sending data to target: {data}")
                                 sent = self.target.send(data)
                                 data = data[sent:]
                         count = 0
                     else:
                         break
-                except:
+                except Exception as e:
+                    print(f"Error in data transfer: {e}")
                     error = True
                     break
 
             if count == TIMEOUT:
+                print("Connection timed out.")
                 error = True
-
 
 def main(host=IP, port=PORT):
     print("\033[0;34m━" * 8, "\033[1;32m PROXY SOCKS", "\033[0;34m━" * 8, "\n")
@@ -231,7 +240,6 @@ def main(host=IP, port=PORT):
     except KeyboardInterrupt:
         print("\nStopping...")
         server.close()
-
 
 if __name__ == "__main__":
     main()
