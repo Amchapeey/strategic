@@ -1,6 +1,6 @@
 [Unit]
 Description=WebSocket Proxy Server
-Documentation=https://github.com/jaka1m
+Documentation=https://github.com/Amchapeey
 After=syslog.target network-online.target
 
 [Service]
