@@ -24,7 +24,7 @@ MSG = '<b><font color="#30e528">WEBSOCKET&nbsp;</font><font color="#ffffffff">BY
 BIG = '<big>'
 FTAG = '</big></font>'
 NTAG = '</p>'
-RESPONSE = f"HTTP/1.1 101 {STYL}{BIG}{MSG}{FTAG}{NTAG}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n"
+RESPONSE = f"HTTP/1.1 101 {STYL}{BIG}{MSG}{FTAG}{NTAG}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\nX-Powered-By: Chapeey\r\n\r\n"
 
 # Load configuration from tun.conf
 with open('/usr/bin/tun.conf', 'r') as file:
