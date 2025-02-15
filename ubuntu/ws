@@ -20,12 +20,11 @@ PASS = ''
 BUFLEN = 8196 * 8
 TIMEOUT = 60
 STYL = '<p style="text-align:center;">'
-MSG = '<b>WEBSOCKET BY CHAPEEY'
-COR = '<font color="#30e528">'
+MSG = '<b><font color="#30e528">WEBSOCKET&nbsp;</font><font color="#ffffffff">BY&nbsp;</font><font color="#30e528">CHAPEEY'
 BIG = '<big>'
 FTAG = '</big></font>'
 NTAG = '</p>'
-RESPONSE = f"HTTP/1.1 101 {STYL}{COR}{BIG}{MSG}{FTAG}{NTAG}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n"
+RESPONSE = f"HTTP/1.1 101 {STYL}{BIG}{MSG}{FTAG}{NTAG}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n"
 
 # Load configuration from tun.conf
 with open('/usr/bin/tun.conf', 'r') as file:
