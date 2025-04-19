@@ -106,4 +106,4 @@ src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubun
 
 #### 𝐂𝐇𝐀𝐏𝐄𝐄𝐘 𝐓𝐄𝐂𝐇
 <div align="center">
-<a href="https://www.instagram.com/amchapeey/"><img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=G0B1&center=true&width=910&height=100&lines=Don't+Forget to take a bath 🥸;PROGRAM+By+CHAPEEY" alt="Typing SVG" /></a>
+<a href="https://www.instagram.com/amchapeey/"><img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=G0B1&center=true&width=910&height=100&lines=Don't+Forget to take a bath 🥸;PROGRAM+By+CHAPEEY"></a>
