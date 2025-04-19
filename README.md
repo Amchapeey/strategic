@@ -45,6 +45,7 @@ wget https://raw.githubusercontent.com/Amchapeey/strategic/main/update.sh && chm
 </small>
 src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2022.04&message=Lts&color=red">
 </small>
+<img
 src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2024.04&message=Lts&color=red">
 </small></p>
 
