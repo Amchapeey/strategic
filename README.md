@@ -89,7 +89,7 @@ src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubun
 
 ### SETTING CLOUDFLARE
 ```
-- SSL/TLS : FULL
+- SSL/TLS : FULL,FULL STRICT 
 - SSL/TLS Recommender : OFF
 - GRPC : ON
 - WEBSOCKET : ON
