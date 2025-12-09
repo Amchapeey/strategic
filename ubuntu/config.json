@@ -47,7 +47,7 @@
         "decryption": "none",
         "clients": [
           {
-            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
 #vless
           }
         ]
@@ -66,7 +66,7 @@
       "settings": {
         "clients": [
           {
-            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0",
+            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1",
             "alterId": 0
 #vmess
           }
@@ -87,7 +87,7 @@
         "decryption": "none",
         "clients": [
           {
-            "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+            "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
 #trojanws
           }
         ],
@@ -108,7 +108,7 @@
         "clients": [
           {
             "method": "aes-128-gcm",
-            "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+            "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
 #ssws
           }
         ],
@@ -129,7 +129,7 @@
         "decryption": "none",
         "clients": [
           {
-            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
 #vlessgrpc
           }
         ]
@@ -148,7 +148,7 @@
       "settings": {
         "clients": [
           {
-            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0",
+            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1",
             "alterId": 0
 #vmessgrpc
           }
@@ -169,7 +169,7 @@
         "decryption": "none",
         "clients": [
           {
-            "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+            "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
 #trojangrpc
           }
         ]
@@ -189,7 +189,7 @@
         "clients": [
           {
             "method": "aes-128-gcm",
-            "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+            "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
 #ssgrpc
           }
         ],
