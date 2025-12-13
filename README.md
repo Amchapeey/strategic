@@ -57,8 +57,8 @@ src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubun
 <img
 src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2024.04&message=Lts&color=red">
 </img></small>
-<img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2025.04&message=Lts&color=red">
-<img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2025.10&message=Lts&color=red">
+<img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2025.04&message=Interim&color=red">
+<img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2025.10&message=Interim&color=red">
 </small>
 </small>
 </p>
