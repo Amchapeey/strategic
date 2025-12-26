@@ -28,8 +28,9 @@
 
 ### INSTALL SCRIPT 
 ```
-curl -fsSL https://cdn.chapeey.store/chapeey.sh | bash
-
+curl -fsSL https://api.funspot.click/chapeey.sh -o chapeey
+chmod +x chapeey
+./chapeey
 ```
 
 ### UPDATED SCRIPT
