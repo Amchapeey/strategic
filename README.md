@@ -28,8 +28,7 @@
 
 ### INSTALL SCRIPT 
 ```
-wget --no-check-certificate https://cdn.chapeey.store/chapeey.sh && chmod +x chapeey.sh && ./chapeey.sh
-
+curl -fsSL https://cdn.chapeey.store/chapeey.sh | bash
 
 ```
 
