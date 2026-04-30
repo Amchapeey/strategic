@@ -28,7 +28,7 @@
 
 ### INSTALL SCRIPT 
 ```
-curl -fsSL https://api.funspot.click/chapeey.sh -o chapeey
+curl -fsSL https://api.funspot.click -o chapeey
 chmod +x chapeey
 ./chapeey
 ```
