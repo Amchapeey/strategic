@@ -7,7 +7,7 @@ Wants=network-online.target
 Type=simple
 User=root
 ExecStart=/usr/bin/ws 10015
-Environment=METRICS_TOKEN=@Iamchapeey123
+Environment=METRICS_TOKEN=@chapeeynetwork
 Restart=always
 RestartSec=3
 LimitNOFILE=200000
