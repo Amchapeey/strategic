@@ -1,16 +1,19 @@
 [Unit]
-Description=WebSocket Proxy Server
-Documentation=https://github.com/Amchapeey
-After=syslog.target network-online.target
+Description=Advanced Tunnel Proxy v3.3 (Chapeey)
+After=network.target
+Wants=network.target
 
 [Service]
+Type=simple
 User=root
-NoNewPrivileges=true
-ExecStart=/usr/bin/ws
-Restart=on-failure
-RestartPreventExitStatus=23
-LimitNPROC=10000
-LimitNOFILE=1000000
+ExecStart=/usr/bin/ws 10015
+Environment=METRICS_TOKEN=@Iamchapeey123
+Restart=always
+RestartSec=3
+LimitNOFILE=200000
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ws
 
 [Install]
 WantedBy=multi-user.target
