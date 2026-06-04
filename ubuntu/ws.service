@@ -1,0 +1,20 @@
+[Unit]
+Description=Advanced Tunnel Proxy v3.3 (Chapeey)
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/ws 10015
+Environment=METRICS_TOKEN=@chapeeynetwork
+Restart=always
+RestartSec=3
+LimitNOFILE=200000
+LimitNPROC=10000
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ws
+
+[Install]
+WantedBy=multi-user.target
