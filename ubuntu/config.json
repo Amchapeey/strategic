@@ -48,7 +48,7 @@
         "clients": [
           {
             "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-#vless
+            #vless
           }
         ]
       },
@@ -68,7 +68,7 @@
           {
             "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1",
             "alterId": 0
-#vmess
+            #vmess
           }
         ]
       },
@@ -88,7 +88,7 @@
         "clients": [
           {
             "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-#trojanws
+            #trojanws
           }
         ],
         "udp": true
@@ -109,7 +109,7 @@
           {
             "method": "aes-128-gcm",
             "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-#ssws
+            #ssws
           }
         ],
         "network": "tcp,udp"
@@ -130,7 +130,7 @@
         "clients": [
           {
             "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-#vlessgrpc
+            #vlessgrpc
           }
         ]
       },
@@ -150,7 +150,7 @@
           {
             "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1",
             "alterId": 0
-#vmessgrpc
+            #vmessgrpc
           }
         ]
       },
@@ -170,7 +170,7 @@
         "clients": [
           {
             "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-#trojangrpc
+            #trojangrpc
           }
         ]
       },
@@ -190,7 +190,7 @@
           {
             "method": "aes-128-gcm",
             "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-#ssgrpc
+            #ssgrpc
           }
         ],
         "network": "tcp,udp"
@@ -199,6 +199,27 @@
         "network": "grpc",
         "grpcSettings": {
           "serviceName": "ss-grpc"
+        }
+      }
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": "10009",
+      "protocol": "vless",
+      "settings": {
+        "decryption": "none",
+        "clients": [
+          {
+            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
+            #vlessxhttp
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "xhttpSettings": {
+          "path": "/vless-xhttp",
+          "mode": "auto"
         }
       }
     }
