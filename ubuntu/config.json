@@ -17,7 +17,7 @@
     "levels": {
       "0": {
         "handshake": 2,
-        "connIdle": 128,
+        "connIdle": 600,
         "statsUserUplink": true,
         "statsUserDownlink": true
       }
@@ -212,6 +212,8 @@
           {
             "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
             #vlessxhttp
+#& today 2026-07-08
+},{"id": "c7a0f135-b7e8-4815-8022-b92d6bb69a59","email": "today"
           }
         ]
       },
@@ -219,7 +221,7 @@
         "network": "xhttp",
         "xhttpSettings": {
           "path": "/vless-xhttp",
-          "mode": "auto"
+          "mode": "stream-up"
         }
       }
     }
