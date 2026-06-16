@@ -1,10 +1,4 @@
-{
-  "log": {
-    "loglevel": "warning",
-    "error": "/var/log/xray/error.log",
-    "access": "/var/log/xray/access.log"
-  },
-  "api": {
+{                                                                 "log": {                                                          "loglevel": "debug",                                            "error": "/var/log/xray/error.log",                             "access": "/var/log/xray/access.log"                          },                                                              "api": {
     "services": [
       "HandlerService",
       "LoggerService",
@@ -210,7 +204,7 @@
         "decryption": "none",
         "clients": [
           {
-            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
+            "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
             #vlessxhttp
           }
         ]
