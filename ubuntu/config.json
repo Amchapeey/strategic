@@ -219,7 +219,7 @@
         "network": "xhttp",
         "xhttpSettings": {
           "path": "/vless-xhttp",
-          "mode": "stream-up"
+          "mode": "auto"
         }
       }
     }
