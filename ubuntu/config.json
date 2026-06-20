@@ -1,4 +1,10 @@
-{                                                                 "log": {                                                          "loglevel": "warning",                                            "error": "/var/log/xray/error.log",                             "access": "/var/log/xray/access.log"                          },                                                              "api": {
+{
+  "log": {
+    "loglevel": "warning",
+    "error": "/var/log/xray/error.log",
+    "access": "/var/log/xray/access.log"
+  },
+  "api": {
     "services": [
       "HandlerService",
       "LoggerService",
@@ -213,7 +219,12 @@
         "network": "xhttp",
         "xhttpSettings": {
           "path": "/api/v2/sync",
-          "mode": "auto"
+          "mode": "auto",
+          "extra": {
+            "headers": {
+              "User-Agent": "chrome"
+            }
+          }
         }
       }
     }
