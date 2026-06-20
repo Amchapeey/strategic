@@ -1,4 +1,10 @@
-{                                                                 "log": {                                                          "loglevel": "warning",                                            "error": "/var/log/xray/error.log",                             "access": "/var/log/xray/access.log"                          },                                                              "api": {
+{
+  "log": {
+    "loglevel": "warning",
+    "access": "/var/log/xray/access.log",
+    "error": "/var/log/xray/error.log"
+  },
+  "api": {
     "services": [
       "HandlerService",
       "LoggerService",
@@ -42,7 +48,6 @@
         "clients": [
           {
             "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-            #vless
           }
         ]
       },
@@ -62,7 +67,6 @@
           {
             "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1",
             "alterId": 0
-            #vmess
           }
         ]
       },
@@ -82,7 +86,6 @@
         "clients": [
           {
             "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-            #trojanws
           }
         ],
         "udp": true
@@ -103,7 +106,6 @@
           {
             "method": "aes-128-gcm",
             "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-            #ssws
           }
         ],
         "network": "tcp,udp"
@@ -124,7 +126,6 @@
         "clients": [
           {
             "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-            #vlessgrpc
           }
         ]
       },
@@ -144,7 +145,6 @@
           {
             "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1",
             "alterId": 0
-            #vmessgrpc
           }
         ]
       },
@@ -164,7 +164,6 @@
         "clients": [
           {
             "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-            #trojangrpc
           }
         ]
       },
@@ -184,7 +183,6 @@
           {
             "method": "aes-128-gcm",
             "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-            #ssgrpc
           }
         ],
         "network": "tcp,udp"
@@ -205,7 +203,6 @@
         "clients": [
           {
             "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e1"
-            #vlessxhttp
           }
         ]
       },
@@ -213,7 +210,12 @@
         "network": "xhttp",
         "xhttpSettings": {
           "path": "/static/js/main",
-          "mode": "auto"
+          "mode": "auto",
+          "extra": {
+            "headers": {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            }
+          }
         }
       }
     }
