@@ -209,7 +209,7 @@
       "streamSettings": {
         "network": "xhttp",
         "xhttpSettings": {
-          "path": "/static/js/main",
+          "path": "/api/v2/sync",
           "mode": "auto",
           "extra": {
             "headers": {
